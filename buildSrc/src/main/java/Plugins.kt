@@ -13,4 +13,7 @@ object Plugins {
     const val KOTLIN_PARCELIZE = "kotlin-parcelize"
 
     const val KOVER = "org.jetbrains.kotlinx.kover"
+
+    const val GMS_GG_SERVICE = "com.google.gms.google-services"
+    const val FIREBASE_CRASHLYTICS = "com.google.firebase.crashlytics"
 }

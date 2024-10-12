@@ -7,6 +7,8 @@ plugins {
     id(Plugins.KOTLIN_PARCELIZE)
     id(Plugins.HILT_ANDROID)
     id(Plugins.KOVER)
+    id(Plugins.GMS_GG_SERVICE)
+//    id(Plugins.FIREBASE_CRASHLYTICS)
 }
 
 val signingProperties = loadProperties("$rootDir/signing.properties")
@@ -166,6 +168,12 @@ dependencies {
 
         debugImplementation(CHUCKER)
         releaseImplementation(CHUCKER_NO_OP)
+    }
+
+    with(Dependencies.Firebase) {
+        implementation(FIREBASE_CRASHLYTICS)
+        implementation(FIREBASE_ANALYTICS)
+        implementation(FIREBASE_IN_APP_MESSAGING)
     }
 
     with(Dependencies.Test) {

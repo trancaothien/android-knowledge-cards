@@ -18,7 +18,7 @@ object Versions {
     const val DATASTORE_PREFERENCES = "1.1.1"
     const val DETEKT = "1.23.7"
 
-    const val GRADLE = "8.6.1"
+    const val GRADLE_PLUGIN = "8.7.0"
 
     const val HILT = "2.51.1"
     const val HILT_NAVIGATION_COMPOSE = "1.2.0"
@@ -27,7 +27,7 @@ object Versions {
     const val JUNIT = "4.13.2"
 
     const val KOTEST = "5.9.1"
-    const val KOTLIN = "1.9.25"
+    const val KOTLIN = "1.9.20"
     const val KOTLIN_COROUTINES = "1.9.0"
     const val KOVER = "0.7.3"
 
@@ -45,4 +45,7 @@ object Versions {
 
     const val TIMBER = "5.0.1"
     const val TURBINE = "1.1.0"
+
+    const val GMS_GOOGLE_SERVICE = "4.4.2"
+    const val FIREBASE_CRASHLYTICS_PLUGIN = "3.0.2"
 }

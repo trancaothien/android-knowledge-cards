@@ -1,12 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id(Plugins.ANDROID_APPLICATION) version Versions.GRADLE apply false
-    id(Plugins.ANDROID_LIBRARY) version Versions.GRADLE apply false
+    id(Plugins.ANDROID_APPLICATION) version Versions.GRADLE_PLUGIN apply false
+    id(Plugins.ANDROID_LIBRARY) version Versions.GRADLE_PLUGIN apply false
     id(Plugins.KOTLIN_JVM) version Versions.KOTLIN apply false
     id(Plugins.KOTLIN_ANDROID) version Versions.KOTLIN apply false
     id(Plugins.HILT_ANDROID) version Versions.HILT apply false
     id(Plugins.DETEKT) version Versions.DETEKT
     id(Plugins.KOVER) version Versions.KOVER
+    id(Plugins.GMS_GG_SERVICE) version Versions.GMS_GOOGLE_SERVICE apply false
+    id(Plugins.FIREBASE_CRASHLYTICS) version Versions.FIREBASE_CRASHLYTICS_PLUGIN apply false
 }
 
 tasks.register("clean", Delete::class) {

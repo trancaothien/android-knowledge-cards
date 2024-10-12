@@ -65,4 +65,10 @@ object Dependencies {
         const val TEST_CORE = "androidx.test:core:${Versions.CORE}"
         const val TURBINE = "app.cash.turbine:turbine:${Versions.TURBINE}"
     }
+
+    object Firebase {
+        const val FIREBASE_ANALYTICS = "com.google.firebase:firebase-analytics:22.1.2"
+        const val FIREBASE_CRASHLYTICS = "com.google.firebase:firebase-crashlytics:19.2.0"
+        const val FIREBASE_IN_APP_MESSAGING = "com.google.firebase:firebase-inappmessaging-display:21.0.0"
+    }
 }
