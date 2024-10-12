@@ -150,6 +150,7 @@ dependencies {
         implementation(UI_TOOLING)
         implementation(MATERIAL)
         implementation(NAVIGATION)
+        implementation(UI_GRAPHICS)
 
         implementation(ACCOMPANIST_PERMISSIONS)
     }
@@ -165,10 +166,6 @@ dependencies {
 
         debugImplementation(CHUCKER)
         releaseImplementation(CHUCKER_NO_OP)
-    }
-
-    with(Dependencies.Util) {
-        implementation(COMMON_KTX)
     }
 
     with(Dependencies.Test) {

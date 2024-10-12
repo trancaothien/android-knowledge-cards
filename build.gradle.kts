@@ -10,20 +10,19 @@ plugins {
 }
 
 tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }
 
 detekt {
     toolVersion = Versions.DETEKT
-
-    source = files(
+    source.setFrom(
         "app/src/main/java",
         "data/src/main/java",
         "domain/src/main/java",
         "buildSrc/src/main/java"
     )
     parallel = false
-    config = files("detekt-config.yml")
+    config.setFrom("detekt-config.yml")
     buildUponDefaultConfig = false
     disableDefaultRuleSets = false
 

@@ -1,5 +1,6 @@
 package com.studio35.knowledgecards.ui
 
+import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraphBuilder
@@ -25,7 +26,7 @@ fun AppNavGraph(
 
 fun NavGraphBuilder.composable(
     destination: BaseDestination,
-    content: @Composable (NavBackStackEntry) -> Unit,
+    content: @Composable AnimatedContentScope.(NavBackStackEntry) -> Unit,
 ) {
     composable(
         route = destination.route,

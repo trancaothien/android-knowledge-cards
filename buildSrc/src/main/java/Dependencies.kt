@@ -11,6 +11,7 @@ object Dependencies {
     object Compose {
         const val BOM = "androidx.compose:compose-bom:${Versions.COMPOSE_BOM}"
         const val UI = "androidx.compose.ui:ui"
+        const val RUNTIME = "androidx.compose.runtime:runtime:1.7.3"
         const val UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
         const val UI_TOOLING = "androidx.compose.ui:ui-tooling"
         const val MATERIAL = "androidx.compose.material:material"
@@ -48,10 +49,6 @@ object Dependencies {
         const val MOSHI = "com.squareup.moshi:moshi:${Versions.MOSHI}"
         const val MOSHI_ADAPTERS = "com.squareup.moshi:moshi-adapters:${Versions.MOSHI}"
         const val MOSHI_KOTLIN = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
-    }
-
-    object Util {
-        const val COMMON_KTX = "com.github.nimblehq:android-common-ktx:${Versions.COMMON_KTX}"
     }
 
     object Test {

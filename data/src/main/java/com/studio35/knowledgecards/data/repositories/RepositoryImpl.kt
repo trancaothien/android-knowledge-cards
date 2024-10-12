@@ -7,7 +7,7 @@ import com.studio35.knowledgecards.domain.models.Model
 import com.studio35.knowledgecards.domain.repositories.Repository
 import kotlinx.coroutines.flow.Flow
 
-class RepositoryImpl constructor(
+class RepositoryImpl(
     private val apiService: ApiService
 ) : Repository {
 
