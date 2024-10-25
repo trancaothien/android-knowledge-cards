@@ -69,6 +69,10 @@ object Dependencies {
         const val FIREBASE_ANALYTICS = "com.google.firebase:firebase-analytics:${Versions.FIREBASE_ANALYTICS}"
         const val FIREBASE_CRASHLYTICS = "com.google.firebase:firebase-crashlytics:${Versions.FIREBASE_CRASHLYTICS}"
         const val FIREBASE_IN_APP_MESSAGING = "com.google.firebase:firebase-inappmessaging-display:${Versions.FIREBASE_IN_APP_MESSAGING}"
+    }
+
+    object Google {
         const val GOOGLE_ADMOB = "com.google.android.gms:play-services-ads:${Versions.GOOGLE_ADMOB}"
+        const val GOOGLE_ANALYTICS = "com.google.android.gms:play-services-analytics:${Versions.GOOGLE_ANALYTICS}"
     }
 }

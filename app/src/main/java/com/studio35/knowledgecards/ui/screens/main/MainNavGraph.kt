@@ -5,7 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.navigation
 import com.studio35.knowledgecards.ui.AppDestination
 import com.studio35.knowledgecards.ui.composable
-import com.studio35.knowledgecards.ui.navigate
+import com.studio35.knowledgecards.ui.go
 import com.studio35.knowledgecards.ui.screens.main.home.HomeScreen
 
 fun NavGraphBuilder.mainNavGraph(
@@ -17,7 +17,7 @@ fun NavGraphBuilder.mainNavGraph(
     ) {
         composable(MainDestination.Home) {
             HomeScreen(
-                navigator = { destination -> navController.navigate(destination) }
+                navigator = { destination -> navController.go(destination) }
             )
         }
     }

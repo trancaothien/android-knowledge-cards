@@ -174,7 +174,11 @@ dependencies {
         implementation(FIREBASE_CRASHLYTICS)
         implementation(FIREBASE_ANALYTICS)
         implementation(FIREBASE_IN_APP_MESSAGING)
+    }
+
+    with(Dependencies.Google) {
         implementation(GOOGLE_ADMOB)
+        implementation(GOOGLE_ANALYTICS)
     }
 
     with(Dependencies.Test) {

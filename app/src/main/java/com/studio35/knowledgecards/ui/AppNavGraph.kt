@@ -40,7 +40,7 @@ fun NavGraphBuilder.composable(
     )
 }
 
-fun NavHostController.navigate(destination: BaseDestination) {
+fun NavHostController.go(destination: BaseDestination) {
     when (destination) {
         is BaseDestination.Up -> {
             destination.results.forEach { (key, value) ->

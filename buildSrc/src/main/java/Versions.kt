@@ -51,5 +51,8 @@ object Versions {
     const val FIREBASE_ANALYTICS = "22.1.2"
     const val FIREBASE_CRASHLYTICS = "19.2.0"
     const val FIREBASE_IN_APP_MESSAGING = "21.0.0"
+
     const val GOOGLE_ADMOB = "23.4.0"
+    const val GOOGLE_ANALYTICS = "10.0.1"
+
 }
