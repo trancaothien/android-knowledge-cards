@@ -6,6 +6,7 @@ object Dependencies {
 
         const val DATASTORE_PREFERENCES = "androidx.datastore:datastore-preferences:${Versions.DATASTORE_PREFERENCES}"
         const val SECURITY_CRYPTO = "androidx.security:security-crypto:${Versions.SECURITY_CRYPTO}"
+        const val APP_COMPAT = "androidx.appcompat:appcompat:${Versions.APP_COMPAT}"
     }
 
     object Compose {
@@ -13,7 +14,8 @@ object Dependencies {
         const val UI = "androidx.compose.ui:ui"
         const val UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
         const val UI_TOOLING = "androidx.compose.ui:ui-tooling"
-        const val MATERIAL = "androidx.compose.material:material"
+        const val FOUNDATION = "androidx.compose.foundation:foundation"
+        const val MATERIAL = "androidx.compose.material3:material3"
         const val NAVIGATION = "androidx.navigation:navigation-compose:${Versions.COMPOSE_NAVIGATION}"
 
         const val ACCOMPANIST_PERMISSIONS = "com.google.accompanist:accompanist-permissions:${Versions.ACCOMPANIST}"

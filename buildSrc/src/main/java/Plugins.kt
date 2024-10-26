@@ -3,6 +3,8 @@ object Plugins {
     const val ANDROID_LIBRARY = "com.android.library"
     const val JAVA_LIBRARY = "java-library"
 
+    const val COMPOSE_COMPILER = "org.jetbrains.kotlin.plugin.compose"
+
     const val DETEKT = "io.gitlab.arturbosch.detekt"
 
     const val HILT_ANDROID = "com.google.dagger.hilt.android"

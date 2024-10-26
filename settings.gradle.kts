@@ -18,3 +18,4 @@ rootProject.name = "KnowledgeCards"
 include(":app")
 include(":data")
 include(":domain")
+include(":designsystem")

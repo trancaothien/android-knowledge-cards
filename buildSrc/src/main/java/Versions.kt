@@ -14,6 +14,7 @@ object Versions {
     const val COMPOSE_NAVIGATION = "2.8.2"
     const val CORE = "1.6.1"
     const val CORE_KTX = "1.13.1"
+    const val APP_COMPAT = "1.7.0"
 
     const val DATASTORE_PREFERENCES = "1.1.1"
     const val DETEKT = "1.23.7"
@@ -28,6 +29,7 @@ object Versions {
 
     const val KOTEST = "5.9.1"
     const val KOTLIN = "1.9.25"
+    const val KOTLIN_COMPOSE_COMPILER = "2.0.21"
     const val KOTLIN_COROUTINES = "1.9.0"
     const val KOVER = "0.7.3"
 

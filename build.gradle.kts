@@ -2,6 +2,7 @@
 plugins {
     id(Plugins.ANDROID_APPLICATION) version Versions.GRADLE_PLUGIN apply false
     id(Plugins.ANDROID_LIBRARY) version Versions.GRADLE_PLUGIN apply false
+    id(Plugins.COMPOSE_COMPILER) version Versions.KOTLIN_COMPOSE_COMPILER apply false
     id(Plugins.KOTLIN_JVM) version Versions.KOTLIN apply false
     id(Plugins.KOTLIN_ANDROID) version Versions.KOTLIN apply false
     id(Plugins.HILT_ANDROID) version Versions.HILT apply false

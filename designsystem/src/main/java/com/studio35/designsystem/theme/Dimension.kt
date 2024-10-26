@@ -1,4 +1,4 @@
-package com.studio35.knowledgecards.ui.theme
+package com.studio35.designsystem.theme
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.dp
@@ -15,4 +15,4 @@ class AppDimensions {
     val spacing3XLarge = 32.dp
 }
 
-internal val LocalAppDimensions = staticCompositionLocalOf { AppDimensions() }
+internal val KnowledgeAppDimensions = staticCompositionLocalOf { AppDimensions() }

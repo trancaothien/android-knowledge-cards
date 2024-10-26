@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.konan.properties.loadProperties
 plugins {
     id(Plugins.ANDROID_APPLICATION)
     id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.COMPOSE_COMPILER)
     id(Plugins.KOTLIN_KAPT)
     id(Plugins.KOTLIN_PARCELIZE)
     id(Plugins.HILT_ANDROID)
@@ -103,10 +104,6 @@ android {
         buildConfig = true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = Versions.COMPOSE_COMPILER
-    }
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -136,6 +133,7 @@ kapt {
 dependencies {
     implementation(project(Modules.DATA))
     implementation(project(Modules.DOMAIN))
+    implementation(project(Modules.DESIGNSYSTEM))
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
@@ -149,6 +147,7 @@ dependencies {
     with(Dependencies.Compose) {
         implementation(platform(BOM))
         implementation(UI)
+        implementation(FOUNDATION)
         implementation(UI_TOOLING)
         implementation(MATERIAL)
         implementation(NAVIGATION)
@@ -202,6 +201,7 @@ dependencies {
 dependencies {
     kover(project(Modules.DATA))
     kover(project(Modules.DOMAIN))
+    kover(project(Modules.DESIGNSYSTEM))
 }
 
 koverReport {

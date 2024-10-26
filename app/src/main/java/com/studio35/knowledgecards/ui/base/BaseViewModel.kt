@@ -7,8 +7,15 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
+interface BaseInput
+interface BaseOutput
+
 @Suppress("PropertyName")
 abstract class BaseViewModel : ViewModel() {
+
+    abstract val input: BaseInput
+
+    abstract val output: BaseOutput
 
     private var loadingCount: Int = 0
 
