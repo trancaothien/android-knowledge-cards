@@ -7,16 +7,22 @@ import com.studio35.knowledgecards.ui.AppDestination
 import com.studio35.knowledgecards.ui.composable
 import com.studio35.knowledgecards.ui.go
 import com.studio35.knowledgecards.ui.screens.main.home.HomeScreen
+import com.studio35.knowledgecards.ui.screens.main.myknowledges.MyKnowledgeScreen
 
 fun NavGraphBuilder.mainNavGraph(
     navController: NavHostController,
 ) {
     navigation(
         route = AppDestination.MainNavGraph.route,
-        startDestination = MainDestination.Home.destination
+        startDestination = MainDestination.Home.destination,
     ) {
         composable(MainDestination.Home) {
             HomeScreen(
+                navigator = { destination -> navController.go(destination) }
+            )
+        }
+        composable(MainDestination.MyKnowledge) {
+            MyKnowledgeScreen(
                 navigator = { destination -> navController.go(destination) }
             )
         }

@@ -3,7 +3,7 @@ package com.studio35.designsystem.theme
 import androidx.compose.ui.graphics.Color
 
 /**
- * Now in Android colors.
+ * Knowledge Application colors.
  */
 internal val Blue10 = Color(0xFF001F28)
 internal val Blue20 = Color(0xFF003544)

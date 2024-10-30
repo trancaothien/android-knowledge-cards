@@ -165,7 +165,7 @@ val LightAndroidBackgroundTheme = BackgroundTheme(color = DarkGreenGray95)
 val DarkAndroidBackgroundTheme = BackgroundTheme(color = Color.Black)
 
 /**
- * Now in Android theme.
+ * Knowledge Application theme.
  *
  * @param darkTheme Whether the theme should use a dark color scheme (follows system by default).
  * @param androidTheme Whether the theme should use the Android theme color scheme instead of the
@@ -216,11 +216,15 @@ fun KnowledgeTheme(
         !disableDynamicTheming && supportsDynamicTheming() -> TintTheme(colorScheme.primary)
         else -> TintTheme()
     }
+    // Dimensions
+    val dimensions = AppDimensions()
+
     // Composition locals
     CompositionLocalProvider(
         LocalGradientColors provides gradientColors,
         LocalBackgroundTheme provides backgroundTheme,
         LocalTintTheme provides tintTheme,
+        LocalAppDimensions provides dimensions,
     ) {
         MaterialTheme(
             colorScheme = colorScheme,

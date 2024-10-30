@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,13 +19,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.studio35.designsystem.theme.KnowledgeTheme
+import com.studio35.designsystem.theme.LocalAppDimensions
 import com.studio35.knowledgecards.R
 import com.studio35.knowledgecards.extensions.collectAsEffect
 import com.studio35.knowledgecards.ui.base.BaseDestination
 import com.studio35.knowledgecards.ui.base.BaseScreen
 import com.studio35.knowledgecards.ui.models.UiModel
 import com.studio35.knowledgecards.ui.showToast
-import timber.log.Timber
 
 @Composable
 fun HomeScreen(
@@ -36,12 +38,13 @@ fun HomeScreen(
     viewModel.navigator.collectAsEffect { destination -> navigator(destination) }
 
     val uiModels: List<UiModel> by viewModel.uiModels.collectAsStateWithLifecycle()
-    val isLoading by viewModel.isLoading.collectAsStateWithLifecycle()
+    val isLoading: Boolean by viewModel.isLoading.collectAsStateWithLifecycle()
 
     HomeScreenContent(
         title = stringResource(id = R.string.app_name),
         uiModels = uiModels,
-        isLoading = isLoading
+        isLoading = isLoading,
+        onNavigateToKnowledge = { viewModel.onNavigateToKnowledge() },
     )
 }
 
@@ -50,24 +53,19 @@ private fun HomeScreenContent(
     title: String,
     uiModels: List<UiModel>,
     isLoading: Boolean = false,
+    onNavigateToKnowledge: () -> Unit = {},
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(LocalAppDimensions.current.spacingXLarge),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        if (isLoading) {
-            CircularProgressIndicator()
-        } else {
-            Text(
-                text = title,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-            )
+        Button(onClick = onNavigateToKnowledge) {
+            Text("Navigate to knowledge screen")
         }
     }
-    Timber.d("Result : $uiModels")
 }
 
 @Preview(showSystemUi = true)

@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navDeepLink
 import com.studio35.knowledgecards.ui.base.BaseDestination
 import com.studio35.knowledgecards.ui.screens.main.mainNavGraph
+import timber.log.Timber
 
 @Composable
 fun AppNavGraph(
@@ -41,8 +42,12 @@ fun NavGraphBuilder.composable(
 }
 
 fun NavHostController.go(destination: BaseDestination) {
+    Timber.i("\nNAVIGATION")
+    Timber.i("NAVIGATION Destination: ${destination.destination}")
+    Timber.i("NAVIGATION Arguments: ${destination.arguments}")
     when (destination) {
         is BaseDestination.Up -> {
+            Timber.i("NAVIGATION Result: ${destination.results}")
             destination.results.forEach { (key, value) ->
                 previousBackStackEntry?.savedStateHandle?.set(key, value)
             }

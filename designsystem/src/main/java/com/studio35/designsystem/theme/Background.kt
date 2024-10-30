@@ -6,7 +6,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 
 /**
- * A class to model background color and tonal elevation values for Now in Android.
+ * A class to model background color and tonal elevation values for Knowledge Application.
  */
 @Immutable
 data class BackgroundTheme(
