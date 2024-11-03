@@ -1,6 +1,6 @@
 package com.studio35.knowledgecards.ui.screens.main.myknowledges
 
-import com.studio35.knowledgecards.domain.usecases.UseCase
+import com.studio35.domain.usecases.UseCase
 import com.studio35.knowledgecards.ui.base.BaseInput
 import com.studio35.knowledgecards.ui.base.BaseOutput
 import com.studio35.knowledgecards.ui.base.BaseViewModel

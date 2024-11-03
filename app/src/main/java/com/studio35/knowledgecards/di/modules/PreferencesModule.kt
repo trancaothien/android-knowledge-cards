@@ -5,8 +5,8 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
-import com.studio35.knowledgecards.data.repositories.AppPreferencesRepositoryImpl
-import com.studio35.knowledgecards.domain.repositories.AppPreferencesRepository
+import com.studio35.data.repositories.AppPreferencesRepositoryImpl
+import com.studio35.domain.repositories.AppPreferencesRepository
 import dagger.*
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext

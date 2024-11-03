@@ -1,6 +1,6 @@
 package com.studio35.knowledgecards.di.modules
 
-import com.studio35.knowledgecards.data.remote.providers.MoshiBuilderProvider
+import com.studio35.data.remote.providers.MoshiBuilderProvider
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides

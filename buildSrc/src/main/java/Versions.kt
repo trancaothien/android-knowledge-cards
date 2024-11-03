@@ -19,7 +19,7 @@ object Versions {
     const val DATASTORE_PREFERENCES = "1.1.1"
     const val DETEKT = "1.23.7"
 
-    const val GRADLE_PLUGIN = "8.7.0"
+    const val GRADLE_PLUGIN = "8.6.1"
 
     const val HILT = "2.51.1"
     const val HILT_NAVIGATION_COMPOSE = "1.2.0"
@@ -56,5 +56,7 @@ object Versions {
 
     const val GOOGLE_ADMOB = "23.4.0"
     const val GOOGLE_ANALYTICS = "10.0.1"
+
+    const val KSP = "2.0.21-1.0.25"
 
 }

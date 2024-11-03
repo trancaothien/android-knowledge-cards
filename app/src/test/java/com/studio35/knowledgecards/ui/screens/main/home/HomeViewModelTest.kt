@@ -1,7 +1,7 @@
 package com.studio35.knowledgecards.ui.screens.main.home
 
 import app.cash.turbine.test
-import com.studio35.knowledgecards.domain.usecases.UseCase
+import com.studio35.domain.usecases.UseCase
 import com.studio35.knowledgecards.test.CoroutineTestRule
 import com.studio35.knowledgecards.test.MockUtil
 import com.studio35.knowledgecards.ui.models.toUiModel

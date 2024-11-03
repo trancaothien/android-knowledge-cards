@@ -1,9 +1,11 @@
 package com.studio35.knowledgecards.di.modules
 
 import com.studio35.knowledgecards.BuildConfig
-import com.studio35.knowledgecards.data.remote.providers.*
-import com.studio35.knowledgecards.data.remote.services.ApiService
+import com.studio35.data.remote.services.ApiService
 import com.squareup.moshi.Moshi
+import com.studio35.data.remote.providers.ApiServiceProvider
+import com.studio35.data.remote.providers.ConverterFactoryProvider
+import com.studio35.data.remote.providers.RetrofitProvider
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

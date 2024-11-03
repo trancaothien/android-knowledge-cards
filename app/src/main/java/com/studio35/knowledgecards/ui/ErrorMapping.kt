@@ -2,7 +2,7 @@ package com.studio35.knowledgecards.ui
 
 import android.content.Context
 import com.studio35.knowledgecards.R
-import com.studio35.knowledgecards.domain.exceptions.ApiException
+import com.studio35.domain.exceptions.ApiException
 import com.studio35.knowledgecards.extensions.showToast
 
 fun Throwable.userReadableMessage(context: Context): String {

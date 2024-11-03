@@ -4,7 +4,7 @@ plugins {
     id(Plugins.ANDROID_APPLICATION)
     id(Plugins.KOTLIN_ANDROID)
     id(Plugins.COMPOSE_COMPILER)
-    id(Plugins.KOTLIN_KAPT)
+    id(Plugins.KSP)
     id(Plugins.KOTLIN_PARCELIZE)
     id(Plugins.HILT_ANDROID)
     id(Plugins.KOVER)
@@ -24,6 +24,7 @@ val getVersionCode: () -> Int = {
 android {
     namespace = "com.studio35.knowledgecards"
     compileSdk = Versions.ANDROID_COMPILE_SDK
+    buildToolsVersion = Versions.ANDROID_COMPILE_SDK.toString()
 
     defaultConfig {
         applicationId = "com.studio35.knowledge_cards"
@@ -41,7 +42,7 @@ android {
     signingConfigs {
         create(BuildTypes.RELEASE) {
             // Remember to edit signing.properties to have the correct info for release build.
-            storeFile = file("../config/release.keystore")
+            storeFile = file("../config/release")
             storePassword = signingProperties.getProperty("KEYSTORE_PASSWORD") as String
             keyPassword = signingProperties.getProperty("KEY_PASSWORD") as String
             keyAlias = signingProperties.getProperty("KEY_ALIAS") as String
@@ -60,7 +61,10 @@ android {
             isMinifyEnabled = true
             isDebuggable = false
             isShrinkResources = true
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             signingConfig = signingConfigs[BuildTypes.RELEASE]
             buildConfigField("String", "BASE_API_URL", "\"https://jsonplaceholder.typicode.com/\"")
         }
@@ -126,10 +130,6 @@ android {
     }
 }
 
-kapt {
-    correctErrorTypes = true
-}
-
 dependencies {
     implementation(project(Modules.DATA))
     implementation(project(Modules.DOMAIN))
@@ -159,7 +159,7 @@ dependencies {
     with(Dependencies.Hilt) {
         implementation(ANDROID)
         implementation(NAVIGATION_COMPOSE)
-        kapt(COMPILER)
+        ksp(COMPILER)
     }
 
     with(Dependencies.Log) {

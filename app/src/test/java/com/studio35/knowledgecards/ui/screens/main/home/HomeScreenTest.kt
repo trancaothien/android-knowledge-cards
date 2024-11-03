@@ -5,7 +5,7 @@ import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.studio35.knowledgecards.R
-import com.studio35.knowledgecards.domain.usecases.UseCase
+import com.studio35.domain.usecases.UseCase
 import com.studio35.knowledgecards.test.MockUtil
 import com.studio35.knowledgecards.ui.base.BaseDestination
 import com.studio35.knowledgecards.ui.screens.BaseScreenTest

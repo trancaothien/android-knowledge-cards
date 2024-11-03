@@ -5,26 +5,12 @@ plugins {
 }
 
 android {
-    namespace = "com.studio35.knowledgecards.data"
+    namespace = "com.studio35.data"
     compileSdk = Versions.ANDROID_COMPILE_SDK
+    buildToolsVersion = Versions.ANDROID_COMPILE_SDK.toString()
 
     defaultConfig {
         minSdk = Versions.ANDROID_MIN_SDK
-
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            )
-        }
-
-        debug {
-            isMinifyEnabled = false
-        }
     }
 
     compileOptions {
@@ -60,6 +46,7 @@ dependencies {
         api(RETROFIT)
         api(RETROFIT_CONVERTER_MOSHI)
 
+        api(platform(OKHTTP_BOM))
         api(OKHTTP)
         api(OKHTTP_LOGGING_INTERCEPTOR)
 

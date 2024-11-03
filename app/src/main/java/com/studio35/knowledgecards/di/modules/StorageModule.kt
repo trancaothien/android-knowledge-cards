@@ -1,7 +1,7 @@
 package com.studio35.knowledgecards.di.modules
 
 import android.content.Context
-import com.studio35.knowledgecards.data.local.preferences.EncryptedSharedPreferences
+import com.studio35.data.local.preferences.EncryptedSharedPreferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

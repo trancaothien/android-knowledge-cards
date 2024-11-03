@@ -1,6 +1,6 @@
 package com.studio35.knowledgecards.test
 
-import com.studio35.knowledgecards.domain.models.Model
+import com.studio35.domain.models.Model
 
 object MockUtil {
 

@@ -1,6 +1,6 @@
 package com.studio35.knowledgecards.ui.models
 
-import com.studio35.knowledgecards.domain.models.Model
+import com.studio35.domain.models.Model
 
 data class UiModel(
     val id: Int

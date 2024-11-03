@@ -8,6 +8,7 @@ plugins {
     id(Plugins.HILT_ANDROID) version Versions.HILT apply false
     id(Plugins.DETEKT) version Versions.DETEKT
     id(Plugins.KOVER) version Versions.KOVER
+    id(Plugins.KSP) version Versions.KSP apply false
     id(Plugins.GMS_GG_SERVICE) version Versions.GMS_GOOGLE_SERVICE apply false
     id(Plugins.FIREBASE_CRASHLYTICS) version Versions.FIREBASE_CRASHLYTICS_PLUGIN apply false
 }

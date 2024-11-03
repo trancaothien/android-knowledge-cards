@@ -44,8 +44,9 @@ object Dependencies {
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT}"
         const val RETROFIT_CONVERTER_MOSHI = "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT}"
 
-        const val OKHTTP = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
-        const val OKHTTP_LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
+        const val OKHTTP_BOM = "com.squareup.okhttp3:okhttp-bom:${Versions.OKHTTP}"
+        const val OKHTTP = "com.squareup.okhttp3:okhttp"
+        const val OKHTTP_LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor"
 
         const val MOSHI = "com.squareup.moshi:moshi:${Versions.MOSHI}"
         const val MOSHI_ADAPTERS = "com.squareup.moshi:moshi-adapters:${Versions.MOSHI}"
