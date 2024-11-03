@@ -24,6 +24,7 @@ class MyKnowledgeViewModel @Inject constructor(
 
     override val input: BaseInput
         get() = this
+
     override val output: BaseOutput
         get() = this
 }

@@ -1,19 +1,32 @@
 plugins {
-    id(Plugins.JAVA_LIBRARY)
-    id(Plugins.KOTLIN_JVM)
+    id(Plugins.ANDROID_LIBRARY)
+    id(Plugins.KOTLIN_ANDROID)
     id(Plugins.KOVER)
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_21.majorVersion.toInt()))
-    }
-}
+android {
+    namespace = "com.studio35.domain"
+    compileSdk = Versions.ANDROID_COMPILE_SDK
+    buildToolsVersion = Versions.ANDROID_COMPILE_SDK.toString()
 
-kotlin {
-    jvmToolchain(JavaVersion.VERSION_21.majorVersion.toInt())
+    defaultConfig {
+        minSdk = Versions.ANDROID_MIN_SDK
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_21.toString()
+    }
+
+    lint {
+        checkDependencies = true
+        xmlReport = true
+        xmlOutput = file("build/reports/lint/lint-result.xml")
+    }
 }
 
 dependencies {
